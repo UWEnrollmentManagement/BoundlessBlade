@@ -1,2 +1,2 @@
-# boundless-blade
+# BoundlessBlade
 Boundless Blade templates for producing University of Washington web pages in Laravel.
