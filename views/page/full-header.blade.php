@@ -1,13 +1,13 @@
-{% extends "page/base.twig" %}
+@extends('boundless-blade::page.base')
 
 
-{% block head %}
-    <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/css/full.css">
-    {{ parent() }}
-{% endblock head %}
+@section('head')
+    <link rel="stylesheet" href="{{ asset('vendor/uwdoem/boundless-blade/css/full.css') }}">
+    @parent
+@endsection
 
 
-{% block navheader %}
+@section('navheader')
     <header class="uw-thinstrip">
 
         <div class='align-right'>
@@ -64,10 +64,10 @@
                                                         "University of Washington Home">Home</a>
         </div>
     </header>
-{% endblock navheader %}
+@endsection
 
 
-{% block footer %}
+@section('footer')
     <div class="uw-footer">
 
         <a href="http://www.washington.edu" class="footer-wordmark">University of Washington</a>
@@ -106,4 +106,5 @@
         <p role="contentinfo">&copy; {{ "now"|date("Y") }} University of Washington  |  Seattle, WA</p>
 
     </div>
-{% endblock footer %}
+@endsection
+

@@ -15,7 +15,7 @@ class ViewProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../../views ', 'boundless-blade');
+        $this->loadViewsFrom(__DIR__.'/../../views', 'boundless-blade');
     }
 
 }

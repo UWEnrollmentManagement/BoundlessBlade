@@ -1,17 +1,17 @@
-{% extends "page/base.twig" %}
+@extends('boundless-blade::page.base')
 
 
-{% block head %}
-    {{ parent() }}
-    <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/css/mini.css">
+@section('head')
+    @parent
+    <link rel="stylesheet" href="{{ asset('vendor/uwdoem/boundless-blade/css/mini.css') }}">
     <style>
         /* In mini-header, on small logo 'W' hover, don't go to big golden 'W'. */
-        .uw-thinstrip .uw-patch:hover { background: url(vendor/uwdoem/boundless/assets/uw-brand/assets/svg/uw-sprite-mini.svg) no-repeat 0 -3px transparent }
+        .uw-thinstrip .uw-patch:hover { background: url({{ asset('vendor/uwdoem/boundless-blade/assets/svg/uw-sprite-mini.svg') }}) no-repeat 0 -3px transparent }
     </style>
-{% endblock head %}
+@endsection
 
 
-{% block navheader %}
+@section('navheader')
     <header class="uw-thinstrip" style="z-index:30">
         <nav class="uw-thin-strip-nav">
             <ul class="uw-thin-links">
@@ -44,10 +44,10 @@
                                                         "University of Washington Home">Home</a>
         </div>
     </header>
-{% endblock navheader %}
+@endsection
 
 
-{% block footer %}
+@section('footer')
     <div class="uw-footer internal-use-footer">
 
         <a href="http://www.washington.edu" class="footer-wordmark">University of Washington</a>
@@ -56,4 +56,4 @@
 
 
     </div>
-{% endblock footer %}
+@endsection
