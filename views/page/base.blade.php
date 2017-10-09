@@ -52,7 +52,7 @@
     @show
 </head>
 
-<body>
+<body class="@yield('body-classes')">
 @section('body')
 
     <div id='uwsearcharea' aria-hidden="true" class="uw-search-bar-container"></div>
